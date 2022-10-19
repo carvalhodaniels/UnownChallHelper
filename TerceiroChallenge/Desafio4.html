@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unown Challenges</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Desafio 4 (Jogo da memória)</h2>
+  <p>Dica:</p>
+  <p>1. Comece por uma das laterais e então vá seguindo para o final da sala.</p>
+  <p>2. Assim que encontrar uma figura conhecida já localize seu par para removê-la e facilitar a conclusão do desafio.</p>
+  <datalist id="pokemons">
+    <option value="Bulbasaur"></option>
+    <option value="Ivysaur"></option>
+    <option value="Venusaur"></option>
+    <option value="Charmander"></option>
+    <option value="Charmeleon"></option>
+    <option value="Charizard"></option>
+    <option value="Squirtle"></option>
+    <option value="Wartortle"></option>
+    <option value="Blastoise"></option>
+    <option value="Caterpie"></option>
+    <option value="Metapod"></option>
+    <option value="Butterfree"></option>
+    <option value="Weedle"></option>
+    <option value="Kakuna"></option>
+    <option value="Beedrill"></option>
+    <option value="Pidgey"></option>
+    <option value="Pidgeotto"></option>
+    <option value="Pidgeot"></option>
+    <option value="Rattata"></option>
+    <option value="Raticate"></option>
+    <option value="Spearow"></option>
+    <option value="Fearow"></option>
+    <option value="Ekans"></option>
+    <option value="Arbok"></option>
+    <option value="Pikachu"></option>
+    <option value="Raichu"></option>
+    <option value="Sandshrew"></option>
+    <option value="Sandslash"></option>
+    <option value="Nidoranf"></option>
+    <option value="Nidorina"></option>
+    <option value="Nidoqueen"></option>
+    <option value="Nidoranm"></option>
+    <option value="Nidorino"></option>
+    <option value="Nidoking"></option>
+    <option value="Clefairy"></option>
+    <option value="Clefable"></option>
+    <option value="Vulpix"></option>
+    <option value="Ninetales"></option>
+    <option value="Jigglypuff"></option>
+    <option value="Wigglytuff"></option>
+    <option value="Zubat"></option>
+    <option value="Golbat"></option>
+    <option value="Oddish"></option>
+    <option value="Gloom"></option>
+    <option value="Vileplume"></option>
+    <option value="Paras"></option>
+    <option value="Parasect"></option>
+    <option value="Venonat"></option>
+    <option value="Venomoth"></option>
+    <option value="Diglett"></option>
+    <option value="Dugtrio"></option>
+    <option value="Meowth"></option>
+    <option value="Persian"></option>
+    <option value="Psyduck"></option>
+    <option value="Golduck"></option>
+    <option value="Mankey"></option>
+    <option value="Primeape"></option>
+    <option value="Growlithe"></option>
+    <option value="Arcanine"></option>
+    <option value="Poliwag"></option>
+    <option value="Poliwhirl"></option>
+    <option value="Poliwrath"></option>
+    <option value="Abra"></option>
+    <option value="Kadabra"></option>
+    <option value="Alakazam"></option>
+    <option value="Machop"></option>
+    <option value="Machoke"></option>
+    <option value="Machamp"></option>
+    <option value="Bellsprout"></option>
+    <option value="Weepinbell"></option>
+    <option value="Victreebel"></option>
+    <option value="Tentacool"></option>
+    <option value="Tentacruel"></option>
+    <option value="Geodude"></option>
+    <option value="Graveler"></option>
+    <option value="Golem"></option>
+    <option value="Ponyta"></option>
+    <option value="Rapidash"></option>
+    <option value="Slowpoke"></option>
+    <option value="Slowbro"></option>
+    <option value="Magnemite"></option>
+    <option value="Magneton"></option>
+    <option value="Farfetchd"></option>
+    <option value="Doduo"></option>
+    <option value="Dodrio"></option>
+    <option value="Seel"></option>
+    <option value="Dewgong"></option>
+    <option value="Grimer"></option>
+    <option value="Muk"></option>
+    <option value="Shellder"></option>
+    <option value="Cloyster"></option>
+    <option value="Gastly"></option>
+    <option value="Haunter"></option>
+    <option value="Gengar"></option>
+    <option value="Onix"></option>
+    <option value="Drowzee"></option>
+    <option value="Hypno"></option>
+    <option value="Krabby"></option>
+    <option value="Kingler"></option>
+    <option value="Voltorb"></option>
+    <option value="Electrode"></option>
+    <option value="Exeggcute"></option>
+    <option value="Exeggutor"></option>
+    <option value="Cubone"></option>
+    <option value="Marowak"></option>
+    <option value="Hitmonlee"></option>
+    <option value="Hitmonchan"></option>
+    <option value="Lickitung"></option>
+    <option value="Koffing"></option>
+    <option value="Weezing"></option>
+    <option value="Rhyhorn"></option>
+    <option value="Rhydon"></option>
+    <option value="Chansey"></option>
+    <option value="Tangela"></option>
+    <option value="Kangaskhan"></option>
+    <option value="Horsea"></option>
+    <option value="Seadra"></option>
+    <option value="Goldeen"></option>
+    <option value="Seaking"></option>
+    <option value="Staryu"></option>
+    <option value="Starmie"></option>
+    <option value="Mr.Mime"></option>
+    <option value="Scyther"></option>
+    <option value="Jynx"></option>
+    <option value="Electabuzz"></option>
+    <option value="Magmar"></option>
+    <option value="Pinsir"></option>
+    <option value="Tauros"></option>
+    <option value="Magikarp"></option>
+    <option value="Gyarados"></option>
+    <option value="Lapras"></option>
+    <option value="Ditto"></option>
+    <option value="Eevee"></option>
+    <option value="Vaporeon"></option>
+    <option value="Jolteon"></option>
+    <option value="Flareon"></option>
+    <option value="Porygon"></option>
+    <option value="Omanyte"></option>
+    <option value="Omastar"></option>
+    <option value="Kabuto"></option>
+    <option value="Kabutops"></option>
+    <option value="Aerodactyl"></option>
+    <option value="Snorlax"></option>
+    <option value="Articuno"></option>
+    <option value="Zapdos"></option>
+    <option value="Moltres"></option>
+    <option value="Dratini"></option>
+    <option value="Dragonair"></option>
+    <option value="Dragonite"></option>
+    <option value="Mewtwo"></option>
+    <option value="Mew"></option>
+  </datalist>
+  <table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+            <td class="tg-0lax">
+                <input type="text" class="pokemon" list="pokemons" size="8"/>
+                <br><img src="img/Empty.png" />
+            </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+
+</body>
+<script>
+    $(document).on('change', '.pokemon', function () {
+        var poke = $("#pokemons option[value='" + $(this).val() + "']").val();
+        if(!poke){
+            poke = "Empty";
+        }
+        $(this).parent('td').children('img').attr("src","img/" + poke + ".png");
+    });
+</script>
+</html>

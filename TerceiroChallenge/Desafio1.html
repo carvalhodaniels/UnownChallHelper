@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unown Challenges</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Desafio 1 (Repetir os movimentos)</h2>
+  <p>Neste challenge, repita corretamente os movimentos do NPC.</p>
+  <p>Dica:</p>
+  <p>1. Os movimentos são feitos em turnos.</p>
+  <p>2. A cada turno são adicionados dois movimentos.</p>
+  <p>3. São um total de 8 turnos, totalizando 16 movimentos.</p>
+  <table class="table table-bordered">
+    <tbody>
+        <tr>
+            <td class="tg-0pky">Turno 1</td>
+            <td class="tg-0lax">
+                <input id="t1" type="text" placeholder="aa" size="16" maxlength="2"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 2</td>
+            <td class="tg-0lax">
+                <input id="t2" type="text" placeholder="aabb" size="16" maxlength="4"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 3</td>
+            <td class="tg-0lax">
+                <input id="t3" type="text" placeholder="aabbcc" size="16" maxlength="6"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 4</td>
+            <td class="tg-0lax">
+                <input id="t4" type="text" placeholder="aabbccdd" size="16" maxlength="8"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 5</td>
+            <td class="tg-0lax">
+                <input id="t5" type="text" placeholder="aabbccddee" size="16" maxlength="10"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 6</td>
+            <td class="tg-0lax">
+                <input id="t6" type="text" placeholder="aabbccddeeff" size="16" maxlength="12"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 7</td>
+            <td class="tg-0lax">
+                <input id="t7" type="text" placeholder="aabbccddeeffgg" size="16" maxlength="14"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Turno 8</td>
+            <td class="tg-0lax">
+                <input id="t8" type="text" placeholder="aabbccddeeffgghh" size="16" maxlength="16"/>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+<script>
+    $("#t1").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t2").val($(this).val());
+        }
+    });
+    $("#t2").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t3").val($(this).val());
+        }
+    });
+    $("#t3").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t4").val($(this).val());
+        }
+    });
+    $("#t4").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t5").val($(this).val());
+        }
+    });
+    $("#t5").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t6").val($(this).val());
+        }
+    });
+    $("#t6").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t7").val($(this).val());
+        }
+    });
+    $("#t7").on('change', function () {
+        if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
+            $("#t8").val($(this).val());
+        }
+    });
+</script>
+</html>
