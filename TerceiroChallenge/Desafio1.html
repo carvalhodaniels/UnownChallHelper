@@ -19,52 +19,52 @@
   <p>3. São um total de 8 turnos, totalizando 16 movimentos.</p>
   <table class="table table-bordered">
     <tbody>
-        <tr>
+        <tr style="background: lightgreen;">
             <td class="tg-0pky">Turno 1</td>
             <td class="tg-0lax">
-                <input id="t1" type="text" placeholder="aa" size="16" maxlength="2"/>
+                <input id="t1" type="text" placeholder="aa" size="18" maxlength="2"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 2</td>
             <td class="tg-0lax">
-                <input id="t2" type="text" placeholder="aabb" size="16" maxlength="4"/>
+                <input id="t2" type="text" placeholder="aa.bb" size="18" maxlength="5"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 3</td>
             <td class="tg-0lax">
-                <input id="t3" type="text" placeholder="aabbcc" size="16" maxlength="6"/>
+                <input id="t3" type="text" placeholder="aa.bb.cc" size="18" maxlength="8"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 4</td>
             <td class="tg-0lax">
-                <input id="t4" type="text" placeholder="aabbccdd" size="16" maxlength="8"/>
+                <input id="t4" type="text" placeholder="aa.bb.cc.dd" size="18" maxlength="11"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 5</td>
             <td class="tg-0lax">
-                <input id="t5" type="text" placeholder="aabbccddee" size="16" maxlength="10"/>
+                <input id="t5" type="text" placeholder="aa.bb.cc.dd.ee" size="18" maxlength="14"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 6</td>
             <td class="tg-0lax">
-                <input id="t6" type="text" placeholder="aabbccddeeff" size="16" maxlength="12"/>
+                <input id="t6" type="text" placeholder="aa.bb.cc.dd.ee.ff" size="18" maxlength="17"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 7</td>
             <td class="tg-0lax">
-                <input id="t7" type="text" placeholder="aabbccddeeffgg" size="16" maxlength="14"/>
+                <input id="t7" type="text" placeholder="aa.bb.cc.dd.ee.ff.gg" size="18" maxlength="20"/>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Turno 8</td>
             <td class="tg-0lax">
-                <input id="t8" type="text" placeholder="aabbccddeeffgghh" size="16" maxlength="16"/>
+                <input id="t8" type="text" placeholder="aa.bb.cc.dd.ee.ff.gg.hh" size="18" maxlength="23"/>
             </td>
         </tr>
     </tbody>
@@ -75,44 +75,58 @@
 <script>
     $("#t1").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t2").val($(this).val());
+            $("#t2").val($(this).val()+".");
             $("#t2").focus();
+            $("table tr:nth-child(1)").css('background', 'none');
+            $("table tr:nth-child(2)").css('background', 'lightgreen');
         }
     });
     $("#t2").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t3").val($(this).val());
+            $("#t3").val($(this).val()+".");
             $("#t3").focus();
+            $("table tr:nth-child(2)").css('background', 'none');
+            $("table tr:nth-child(3)").css('background', 'lightgreen');
         }
     });
     $("#t3").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t4").val($(this).val());
+            $("#t4").val($(this).val()+".");
             $("#t4").focus();
+            $("table tr:nth-child(3)").css('background', 'none');
+            $("table tr:nth-child(4)").css('background', 'lightgreen');
         }
     });
     $("#t4").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t5").val($(this).val());
+            $("#t5").val($(this).val()+".");
             $("#t5").focus();
+            $("table tr:nth-child(4)").css('background', 'none');
+            $("table tr:nth-child(5)").css('background', 'lightgreen');
         }
     });
     $("#t5").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t6").val($(this).val());
+            $("#t6").val($(this).val()+".");
             $("#t6").focus();
+            $("table tr:nth-child(5)").css('background', 'none');
+            $("table tr:nth-child(6)").css('background', 'lightgreen');
         }
     });
     $("#t6").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t7").val($(this).val());
+            $("#t7").val($(this).val()+".");
             $("#t7").focus();
+            $("table tr:nth-child(6)").css('background', 'none');
+            $("table tr:nth-child(7)").css('background', 'lightgreen');
         }
     });
     $("#t7").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
-            $("#t8").val($(this).val());
+            $("#t8").val($(this).val()+".");
             $("#t8").focus();
+            $("table tr:nth-child(7)").css('background', 'none');
+            $("table tr:nth-child(8)").css('background', 'lightgreen');
         }
     });
 </script>
