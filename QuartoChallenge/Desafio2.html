@@ -17,7 +17,7 @@
   <p>1. Em cada turno é acrescentada uma cor à sequência.</p>
   <table class="table table-bordered">
     <tbody>
-        <tr>
+        <tr style="background: lightgreen;">
             <td class="tg-0pky">Turno 1</td>
             <td class="tg-0lax">
                 <input id="t1" type="text" placeholder="a" size="11" maxlength="1"/>
@@ -93,66 +93,88 @@
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t2").val($(this).val());
             $("#t2").focus();
+            $("table tr:nth-child(1)").css('background', 'none');
+            $("table tr:nth-child(2)").css('background', 'lightgreen');
         }
     });
     $("#t2").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t3").val($(this).val());
             $("#t3").focus();
+            $("table tr:nth-child(2)").css('background', 'none');
+            $("table tr:nth-child(3)").css('background', 'lightgreen');
         }
     });
     $("#t3").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t4").val($(this).val());
             $("#t4").focus();
+            $("table tr:nth-child(3)").css('background', 'none');
+            $("table tr:nth-child(4)").css('background', 'lightgreen');
         }
     });
     $("#t4").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t5").val($(this).val());
             $("#t5").focus();
+            $("table tr:nth-child(4)").css('background', 'none');
+            $("table tr:nth-child(5)").css('background', 'lightgreen');
         }
     });
     $("#t5").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t6").val($(this).val());
             $("#t6").focus();
+            $("table tr:nth-child(5)").css('background', 'none');
+            $("table tr:nth-child(6)").css('background', 'lightgreen');
         }
     });
     $("#t6").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t7").val($(this).val());
             $("#t7").focus();
+            $("table tr:nth-child(6)").css('background', 'none');
+            $("table tr:nth-child(7)").css('background', 'lightgreen');
         }
     });
     $("#t7").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t8").val($(this).val());
             $("#t8").focus();
+            $("table tr:nth-child(7)").css('background', 'none');
+            $("table tr:nth-child(8)").css('background', 'lightgreen');
         }
     });
     $("#t8").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t9").val($(this).val());
             $("#t9").focus();
+            $("table tr:nth-child(8)").css('background', 'none');
+            $("table tr:nth-child(9)").css('background', 'lightgreen');
         }
     });
     $("#t9").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t10").val($(this).val());
             $("#t10").focus();
+            $("table tr:nth-child(9)").css('background', 'none');
+            $("table tr:nth-child(10)").css('background', 'lightgreen');
         }
     });
     $("#t10").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t11").val($(this).val());
             $("#t11").focus();
+            $("table tr:nth-child(10)").css('background', 'none');
+            $("table tr:nth-child(11)").css('background', 'lightgreen');
         }
     });
     $("#t11").on('change', function () {
         if ($(this).val().length == parseInt($(this).attr("maxlength"))) {
             $("#t12").val($(this).val());
             $("#t12").focus();
+            $("table tr:nth-child(11)").css('background', 'none');
+            $("table tr:nth-child(12)").css('background', 'lightgreen');
         }
     });
 </script>
